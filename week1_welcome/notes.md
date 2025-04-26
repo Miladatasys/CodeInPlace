@@ -238,3 +238,15 @@ Control structure we've seen:
 1. for loops
 2. while loops
 3. if statements
+
+
+# Class 1. 
+
+### Assignments
+
+Each beeper represent a pile of supplies
+a hospital is made of 6 beepers
+there shouldn't be a wall
+* use helper functions
+* safe move (move_to_wall)
+* for _ in range()  the _ symbol is a placeholder
