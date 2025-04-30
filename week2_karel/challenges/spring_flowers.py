@@ -7,8 +7,10 @@ and end in the bottom right corner of the world facing East.
 from karel.stanfordkarel import *
 
 def main():
-        # bloom_flower()
-    pass
+    for i in range(2):
+        bloom_flower()
+    move_to_wall()
+   
 
 def bloom_flower():
     """
@@ -16,20 +18,29 @@ def bloom_flower():
     Moves Karel up the flower, blooms the flower, moves Karel back
     down and turns her to face East
     """
-    pass
+    move_to_wall()
+    climb_stem()
+    bloom()
+    descend_stem()
+
 
 def move_to_wall():
     # Moves Karel forward until she is block
-    pass
+    while front_is_clear():
+        move()
 
+    
 def climb_stem():
     """
     Moves Karel up the stem util top
-    Precondition:   Karel starts facing East at the base
+    Precondition:   Karel starts facing North at the base
     Postcondition:  Karel's at the top, in the bottom left corner
                     of the bloom facing North
     """
-    pass
+    turn_left()
+    while right_is_blocked():
+        move()
+    
 
 # Mid-level helper functions
 def bloom():
@@ -40,7 +51,23 @@ def bloom():
     Postcondition:  End up at the bottom right corner of the square,
                     facing South
     """
-    pass
+    put_beeper()
+    move()
+    for i in range(2):
+        put_beeper()
+        turn_right()
+        move()
+    put_beeper()
+
+def descend_stem():
+    """
+    Once the blooms are present, it changes it's direction to ground
+    Precondition:
+    Postcondition:
+    """
+    while front_is_clear():
+        move()
+    turn_left()
 
 
 # Low-level helper functions
