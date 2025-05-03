@@ -14,10 +14,6 @@ def main():
         fill_row()
         turn_right()
     fill_row()
-    # Move Karel to top-right
-    turn_right()
-    while front_is_clear():
-        move()
 
 def fill_row():
     """
@@ -30,8 +26,7 @@ def fill_row():
         move()
     put_beeper()
     move_up_to_next_row()
-    if front_is_clear():
-        move()
+    move()
     
 
 

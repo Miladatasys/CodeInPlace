@@ -186,3 +186,10 @@ But this is a real mindset shift, you have to think about how much work a comput
 - You'll find a working solution in ``examples/comb.py``
 
 That's all! If you have time, check out the wordsearch code.
+
+## Live session
+
+advices:
+reserve keyword we don't use for names: return
+a for loop 
+concept in program try not repeat yourself
