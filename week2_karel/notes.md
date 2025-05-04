@@ -193,3 +193,32 @@ advices:
 reserve keyword we don't use for names: return
 a for loop 
 concept in program try not repeat yourself
+
+
+# Joseph session
+
+### Utilities:
+
+- Safety first:
+```
+
+```
+
+-  Main character motion:
+```
+
+```
+
+- Let's get reoriented:
+```
+
+```
+
+- There's no place like home:
+```
+
+```
+
+#### EXPLANATIONS:
+_ or i in a for loop is just a variable name that we give to the loop index. 
+
