@@ -189,36 +189,90 @@ That's all! If you have time, check out the wordsearch code.
 
 ## Live session
 
-advices:
-reserve keyword we don't use for names: return
+Advices:
+- Reserve keyword we don't use for names: return
 a for loop 
-concept in program try not repeat yourself
+- Concept in programming: Try not Repeat Yourself
 
 
 # Joseph session
 
 ### Utilities:
 
-- Safety first:
+- **Safety first:**
+```
+def move_safely():
+    if front_is_clear():
+    move()
+```
+```
+def put_beeper_safely():
+    if no_beepers_present():
+    put_beeper()
+```
+```
+def pick_beeper_safely():
+    if beepers_present():
+        pick_beeper()
 ```
 
+-  **Main character motion:**
+```
+def turn_around():
+    turn_left()
+    turn_left()
+```
+```
+def turn_right():
+    for _ in range(3):
+        turn_left()
+```
+- **Let's get reoriented:**
+```
+def face_north():
+    while not_facing_north():
+        turn_left()
+```
+- TIP: Let's say that you're already facing north and you want to move() or ascend. How you do that?
+    1. You define a function:
+    2. Move safely
+    Like this:
+        ```
+        def move_north():
+            face_north()
+            move_safely()
+        ```
+
+```
+def face_south():
+    while not_facing_south():
+        turn_left()
+```
+```
+def face_east():
+    while not_facing_east():
+        turn_left()
+```
+```
+def face_west():
+    while not_facing_west():
+        turn_left()
 ```
 
--  Main character motion:
+- **There's no place like home:**
+```
+def go_home():
+    """
+    Karel returns to the SW corner, facing East
+    """
+    face_west()
+    move_to_wall()
+    turn_left()
+    move_to_wall()
+    turn_left()
 ```
 
-```
+#### EXPLANATIONS AND TIPS:
+- _ or i in a for loop is just a variable name that we give to the loop index. 
 
-- Let's get reoriented:
-```
-
-```
-
-- There's no place like home:
-```
-
-```
-
-#### EXPLANATIONS:
-_ or i in a for loop is just a variable name that we give to the loop index. 
-
+- Rewriting code is **NOT** recommended
