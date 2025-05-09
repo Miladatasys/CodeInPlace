@@ -173,3 +173,129 @@ How much do I weight?
 Or How many children do I have?
 * Answer is an integer
 - There is a well defined "next" number. 
+A constant is a variable used to represents a value that will not changes and it's located outside the main and is written in all caps. You can use it in the main function as well like print the value, multiply it, etc. 
+```
+DOG_YEARS_MULTIPLIER = 7.18
+
+def main():
+    pass
+
+if __name__ == '__main__':
+    main()
+```
+
+## Lesson AI and Random Libraries
+**Goals**:
+1. Use the Python Random Library
+2. Call ChatGPT from inside your Python programs
+
+**Random Number Generation**
+* Want a way to generate random number
+    -   say, for games or other apps
+* No "true" randomness in computer, so we have pseudorandom numbers
+    -   "That looks pretty random to me"
+* Want "black box" that we can ask for random numbers
+    -   What happens inside here is that box keeps track of a little number that's know as the **seed**
+        and what it does it takes that seed and it puts it through this complicated math function and when you say and when you say "Hey, I want a random number" It gives you back that random number but it stores that random number internally that it generated as or some variance of it as a **new seed**
+        So the next time you ask for another random number it takes that **new seed**, puts it through this complicated function and generates for you another random number that looks different as far as you know 'cause you don't know this function inside the box and it's so complicated you can't really figure it out
+        and after generates that new number it updates it's **seed**
+
+    -   You can specify the seed so you can say you should use this number as the seed for the number generator. 
+        If you tell that what is startaring seed it will always generate the same sequence of random numbers. 
+
+    ```
+    import random 
+    ```
+
+    | Function                   | What it does                                                                | Example Use Case                                   |
+    |----------------------------|-----------------------------------------------------------------------------|----------------------------------------------------|
+    | random.randint(min, max)   | Returns a random integer between `min` and `max`, inclusive.                | Simulate rolling a dice: `random.randint(1, 6)`    |
+    | random.random()            | Returns a random real number (float) between 0 and 1.                       | Simulate a coin flip: `random.random() < 0.5`      |
+    | random.uniform(min, max)   | Returns a random real number (float) between `min` and `max`.               | Simulate temperature: `random.uniform(36.5, 37.5)` |
+    | random.seed(x)             | Sets the "seed" of the random number generator to `x`.                      | Reproduce results for testing: `random.seed(42)`   |
+
+
+## Brand new AI library!
+
+That you can use while learning console programming.
+```
+from ai import call_gpt
+
+response = call_gpt(prompt)
+response = input(prompt) # call_gpt has a lot in common with input
+```
+- The function ``call_gpt`` it takes a prompt and then it gives back a response. 
+```
+from ai import call_gpt
+
+def main():
+    response = call_gpt("What are you? ")
+    print(response) 
+
+if __name__ == "__main__":
+    main()
+```
+**LLMs**
+-   They'll allucinate. 
+-   Be careful before using for serious stuff
+-   Don't put personal things
+
+**About API Keys** 
+-   An API Key is like a password that your project uses to make requests to OpenAI.
+
+## Live Session
+
+**Context**
+
+This assignment is based on a real-world use case: NASA's Ingenuity helicopter on Mars. Because Mars has weaker gravity, any object (including humans) weighs less than it would on Earth — specifically, only 37.8% of its Earth weight.
+
+**What you're asked to do:**
+
+You're writing a Python console program that:
+1. Prompts the user to enter their weight on Earth.
+2. Converts that weight to the Mars equivalent using the 37.8% gravity factor. 
+3. Prints the result rounded to two decimal places using Python's round() function.
+
+**What programming concepts you're practicing:**
+
+-   ``input()`` to get a number from the user:
+    ```
+    weight = input("Enter a weight on Earth: ")
+    ```
+    -   This gives you a ``str`` so you'll need to convert it to a number using float() or int() depending on the expected input.
+
+-   ``*`` Arithmetic/Multiplication:
+    -   By applying a simple percentage -based formula
+    ```
+    mars_weight = earth_weight * 0.378
+    ```
+    - This introduces **floating point multiplication**
+
+-   ``MARS_GRAVITY`` or Constants:
+    - The value ``0.378`` is a constant - it doesn't change. You could (and should for clarity) define it like this:
+    ```
+    MARS_GRAVITY = 0.378
+    ```
+
+-   ``round() `` or Rounding:
+    -Python's built in round() is used to format output to two decimal places.
+    ```
+    rounded = round(mars_weight, 2)
+    ```
+
+-   ``print`` or console output:
+    -You're expected to print a friendly message with the result:
+    ```
+    print(f"The equivalent weight on Mars: {rounded}")
+    ```    
+
+**IMPORTANT TIPS:**
+-   BEFORE STARTING CODING:
+    - knowing the goals, and constraints and writing pseudo-code.
+-   Anything enclosed within inverted commas will be treated as a string literal.
+-   Type casting: changing the data type of a variable value
+-   String concatenation when you use a + symbol between strings.
+
+-   ``==`` test a value, might used in if statements. 
+-   Relational operators
+- in a condition always call the ``:``
