@@ -170,3 +170,55 @@ if play_again:
 Tip: Boolean variables help make code more readable and logical, especially in conditions and loops.
 
 
+# For Loops in Python
+
+Main goal: **Recognize for loops in console programming and also, understand how to use the variable ``i`` or index variable**
+```
+def main():
+    for i in range(100):
+        print(f"Python rocks socks! {i}") # I can use the variable i
+```
+You can use it in:
+- arithmetic expressions
+- print statements
+
+- Another example: **Generating Even Numbers** that produce the same output:
+```
+ 0
+ 2
+ 4
+```
+```
+# Method 1: Multiply i by 2
+for i in range(3):      # i = 0, 1, 2
+    print(i * 2)        # prints 0, 2, 4
+```
+```
+# Method 2: Use step in range()
+for i in range(0, 6, 2):  # start at 0, stop before 6, step by 2
+    print(i)              # prints 0, 2, 4
+```
+
+**- Multiple lines inside a for loop:**
+```
+def main():
+    for i in range(100):
+        print(f"You rock! {i}")
+        print("Keep learning")
+```
+
+**Key concepts**
+- range(start, stop, step) allows fine control:
+    - ``start``: where the loop begins (inclusive)
+
+    - ``stop``: where the loop ends (exclusive)
+
+    - ``step``: how much to increment each time (e.g., 2 to skip by twos)
+
+**When to Use These**:
+
+- Want a loop to iterate a fixed number of times? → ``range(n)``
+
+- Want to generate even numbers or any custom step? → ``range(start, stop, step)``
+
+- Want to index into a list or string? → ``for i in range(len(my_list))``
