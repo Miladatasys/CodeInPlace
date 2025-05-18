@@ -222,3 +222,9 @@ def main():
 - Want to generate even numbers or any custom step? → ``range(start, stop, step)``
 
 - Want to index into a list or string? → ``for i in range(len(my_list))``
+
+# Live sessions
+- Type casting
+- Type function it's useful 
+- Practice boolean operators 
+- 
