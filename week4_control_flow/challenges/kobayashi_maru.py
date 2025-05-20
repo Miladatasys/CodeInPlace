@@ -50,9 +50,9 @@ def main():
         "You are seated in the command chair of a Constitution-class starship. "
         "The lights dim. The simulation begins."
         "This is the Kobayashi Maru — a Starfleet training scenario designed to test "
-        "the character of its commanders under impossible conditions. "
+        "the character of its commanders under impossible conditions.\n "
         "Your ship is patrolling the edge of the Neutral Zone, a fragile boundary "
-        "between the Federation, the Klingon Empire, and the Romulan Star Empire. "
+        "between the Federation, the Klingon Empire, and the Romulan Star Empire.\n"
         "Suddenly, a distress call pierces the silence. The Kobayashi Maru, "
         "a civilian fuel carrier, has struck a gravitic mine and was dragged inside the Neutral Zone. "
         "Its hull is breached. Hundreds of lives hang in the balance. "
@@ -292,27 +292,10 @@ def main():
     }
 
     """Milestone #5: IA endings"""
-    story_prompt = f"""
-    You're a comedic Starfleet simulation narrator from the year 2400.
-    The player has just decided their strategy choices for the legendary Kobayashi Maru test - a no win scenario.
-    Your job is to generate a completely absurd, scientifically-flavored, catastrophic ending to the mission,
-    based on the player's decisions, while keeping the tone in-universe, overly dramatic, and hilarious.
-    
-    Commander Profile:
-    - Name: {player_data['name']}
-    - Neutral Zone Decision: {player_data['entered_neutral_zone']}
-    - Final Action Taken: {player_data['action']}
-    - Beverage of Choice: {player_data['beverage']}
-    - Strategy Chosen: {player_data['strategy']}
+    print("Commander's log...")
+    time.sleep(1)
+    story_prompt = f"You're a comedic Starfleet simulation narrator from the year 2400. The player has just decided their strategy choices for the legendary Kobayashi Maru test - a no win scenario. Your job is to generate a completely absurd, scientifically-flavored, catastrophic ending to the mission, based on the player's decisions, while keeping the tone in-universe, overly dramatic, and hilarious. Commander Profile: - Name: {player_data['name']} - Neutral Zone Decision: {player_data['entered_neutral_zone']} - Final Action Taken: {player_data['action']} - Beverage of Choice: {player_data['beverage']} - Strategy Chosen: {player_data['strategy']} Instructions: 1. Begin by summarizing what appeared to be a promising moment of hope or tactical success. 2. Immediately follow with an outrageous, catastrophic event (e.g., space whales, warp core meltdown caused by a banana peel, any funny ending). 3. End with a short, funny, *inspirational quote* about the importance of failure, delivered in the tone of a wise old Vulcan or a malfunctioning AI. 4. It must sound like it's part of the official Starfleet training logs — overly formal, but absolutely ridiculous. Make it brief, punchy, and laugh-out-loud weird, don't be too obvious calling the words fun, hilarious, just tell the story by be subtle and fun, create any scenario that will be fun for fans."
 
-    Instructions:
-    1. Begin by summarizing what appeared to be a promising moment of hope or tactical success.
-    2. Immediately follow with an outrageous, catastrophic event (e.g., space whales, interdimensional pie storms, Klingon karaoke virus outbreak, warp core meltdown caused by a banana peel).
-    3. End with a short, funny, *inspirational quote* about the importance of failure, delivered in the tone of a wise old Vulcan or a malfunctioning AI.
-    4. It must sound like it's part of the official Starfleet training logs — overly formal, but absolutely ridiculous.
-
-    Make it brief, punchy, and laugh-out-loud weird.
-    """
     response = call_gpt(story_prompt)
     print(response)
 
