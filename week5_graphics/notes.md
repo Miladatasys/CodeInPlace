@@ -204,7 +204,6 @@ I need to connect:
     result = input("string please!")
     ```
 https://youtu.be/yhA5FjQSB4g?si=3ttQmmt9u1ER_XTB
-https://www.youtube.com/watch?v=t7h_GHgIUmE&t=3s
 
 Anatomy of a function:
 
