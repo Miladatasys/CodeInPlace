@@ -100,3 +100,26 @@ my_list.insert(1, 27) # will insert the elem at index 1
 [42, 27, 100, 10]
 ```
 there's functions: max(my_list), min, sum
+
+live session:
+
+- Strings are not mutable
+- indexes start counting at 0
+- list start with []
+-  push operations
+- with pop you give the index, 
+- the remove asks for the element. 
+- built in function len()
+- dictorionaries, are mutable, just like lists
+- make sure keys are in a dictionary or have some check to see if they are before trying to access or delete data
+- keys have to be unique
+- keys can be anything that is hashable, are often strings, though
+- you can overwrite the previous values.
+- print(type(fruit_list))
+- w3school for programming for data structures 
+- Tutorialspoint
+- StackOverflow
+- ChatGPT
+- data accuracy, data integrity, is important to check null strings
+- choice function to pick random elements, is part of the random lib
+- infinite loop
