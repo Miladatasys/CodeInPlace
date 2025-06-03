@@ -101,7 +101,7 @@ my_list.insert(1, 27) # will insert the elem at index 1
 ```
 there's functions: max(my_list), min, sum
 
-live session:
+# live session:
 
 - Strings are not mutable
 - indexes start counting at 0
@@ -123,3 +123,82 @@ live session:
 - data accuracy, data integrity, is important to check null strings
 - choice function to pick random elements, is part of the random lib
 - infinite loop
+
+
+# Lesson 13. Dictionaries
+Goals:
+1. Understand the idea of a dictionary, keys and values
+2. Create a dictionary
+3. Add key/value pairs to the dictionary
+4. Get the value associated with a key
+
+https://www.youtube.com/watch?v=MuBB7xprOtk
+
+- A way to store information in Python using a method where they associate a **key** with a **value** for that key. 
+- A key is a unique identifier
+- If we think of a dictionary, a value is something we associate with that key, for example they key is the **word** and the value would be definition
+- Another example could be a phonebook: where keys are names and values are phone numbers
+
+Creating dictionaries:
+- ``start/end`` with braces
+- ``Key:Value`` pairs separated by colon
+- Each pair is separated by a ``comma``
+```
+ages = {'Chris': 32, 'Juliette': 24, 'Mehran': 50}
+
+squares = {2: 4, 3: 9, 4: 16, 5: 25}
+
+phone = {'Pat': '555-1212', 'Jenny': '867-5309'}
+
+empty_dict = {}
+```
+Dictionaries are like a set of ``variables`` that are indexed by ``keys``
+- Use **keys** to access associated **value**:
+
+    like **I need the information associated with this specific key and that's how you get out the value**
+- terminology: 
+``` 
+ages['Chris'] is 32 
+``` 
+You say ages ``'sub'`` Chris is 32  
+-You can set values like regular variables:
+``` 
+ages['Mehran'] = 18 
+``` 
+ages ``sub`` Mheran equal 18 and that's going to update the value same as:
+``` 
+ages['Mehran'] +=3 #21 is the new value
+``` 
+- To access the value, first we need to check the information or ``values`` they have
+``` 
+if 'Mehran' in ages:
+Will return True
+
+# or
+
+'Karel the robot' not in ages:
+True
+``` 
+
+Adding elements or well said add ``pairs`` (a pair refers to a key and a value, so we call them key/value pairs) to a dictionary:
+``` 
+phone['Pat']: '555-1212'
+phone['Pat']: None
+``` 
+Looping over Dictionary using for-each loop just using name of dict:
+```
+for key in ages:
+    value = ages[key]
+    print(str(key) + " -> " + str(value))
+``` 
+- Remember saying ages sub key to acces to the elems in a dict
+
+**List vs Dictionary**
+
+- The indices had to be ``integers``
+- In dictionaries these could be ``integers``, ``strings``
+
+![list vs dict](list_dict.png)
+https://youtu.be/c-gtQKRwzhk?si=lKmwWgeOVYziq-XO
+
+![alt text](image.png)
